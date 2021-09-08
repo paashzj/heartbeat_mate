@@ -13,11 +13,11 @@ func Start() {
 func startHb() {
 	err := generateHbFile()
 	if err != nil {
-		util.Logger().Error("generate prom config file failed ", zap.Error(err))
+		util.Logger().Error("generate heartbeat config file failed ", zap.Error(err))
 		return
 	}
 	err = util.CallScript(path.HbStartScript)
-	util.Logger().Error("run start prom scripts failed ", zap.Error(err))
+	util.Logger().Error("run start heartbeat scripts failed ", zap.Error(err))
 }
 
 func generateHbFile() (err error) {
