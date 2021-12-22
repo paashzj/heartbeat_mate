@@ -14,4 +14,4 @@ COPY --from=build /opt/sh/compile/pkg/heartbeat_mate /opt/sh/heartbeat/mate/hear
 
 WORKDIR /opt/sh/heartbeat
 
-CMD ["/usr/local/bin/dumb-init", "bash", "-vx", "/opt/sh/heartbeat/mate/scripts/start.sh"]
+CMD ["/usr/bin/dumb-init", "bash", "-vx", "/opt/sh/heartbeat/mate/scripts/start.sh"]
